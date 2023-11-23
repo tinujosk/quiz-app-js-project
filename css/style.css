@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bold-text {
+  font-family: "Roboto", "san-serif";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #024751;
+  padding: 10px;
+  text-align: center;
+}
+
+nav img {
+  width: 200px;
+  height: 50px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+nav span {
+  color: #fff;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+nav ul li:hover {
+  background: #fff;
+  color: #024751;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+header img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+#container {
+  position: relative;
+  color: #024751;
+  background-image: url("../images/quiz-bnr-dec17.jpg"); /* https://www.bergerpaints.com/colour-magazine/Upload/Quiz/Banner/quiz-bnr-dec17.jpg */
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container > p {
+  margin-bottom: 40px;
+}
+
+.btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#quiz-btn {
+  background-color: #f7b807;
+}
+
+#pricing-btn {
+  background-color: #024751;
+  color: #fff;
+  margin: 0 auto;
+}
+
+#quiz-btn:hover {
+  box-shadow: 5px 5px 10px -5px #000000;
+}
+
+#feature-list {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#slider-section {
+  padding: 30px 50px;
+  height: 550px;
+  text-align: center;
+}
+
+footer {
+  background: #024751;
+  height: 350px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-main {
+  display: flex;
+  padding: 50px 20px;
+  justify-content: space-around;
+}
+
+#footer-left,
+#footer-right {
+  width: 40%;
+}
+
+#footer-left cite {
+  color: rgb(197, 78, 78);
+}
+
+#footer-right {
+  display: flex;
+}
+
+#footer-right li {
+  cursor: pointer;
+}
+
+.slider {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider-card {
+  flex: 0 0 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+#slider-container {
+  display: flex;
+  align-items: center;
+  height: 60%;
+}
