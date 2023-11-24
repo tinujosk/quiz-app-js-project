@@ -22,7 +22,7 @@ nav {
 }
 
 nav img {
-  width: 200px;
+  width: 140px;
   height: 50px;
 }
 
@@ -64,11 +64,6 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
   padding: 10px;
-}
-
-header img {
-  width: 100%;
-  opacity: 0.8;
 }
 
 #container {
@@ -179,4 +174,63 @@ footer {
   display: flex;
   align-items: center;
   height: 60%;
+}
+
+.quiz-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.question-container h3 {
+  color: rgb(197, 78, 78);
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: none;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.form-check-label {
+  font-size: 16px;
+}
+
+.next-btn,
+.submit-btn,
+.retake-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #024751;
+  color: #fff;
+  font-size: 16px;
+}
+
+.next-btn:hover,
+.submit-btn:hover,
+.retake-btn:hover {
+  background-color: rgb(197, 78, 78);
+}
+
+.toast {
+  display: none;
+  color: red;
+  margin-bottom: 30px;
+}
+
+#feedback {
+  font-size: 30px;
+  font-weight: 600;
 }
