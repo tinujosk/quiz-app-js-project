@@ -1,4 +1,9 @@
-$(document).ready(function () {
+/* Student Name: Tinu Jos Kadavanattu
+     Student Number: 8927158
+     Section: 07
+*/
+$(document).ready(() => {
+  //All the questions, options and answers
   const javascriptQuestions = [
     {
       question: "What does 'DOM' stand for?",
@@ -53,7 +58,8 @@ $(document).ready(function () {
   let score = 0;
   const totalQuestions = javascriptQuestions.length;
 
-  function displayQuestion() {
+  // function to display questions
+  const displayQuestion = () => {
     const currentQuizQuestion = javascriptQuestions[currentQuestion];
     $(".question-container").html(`
         <div class="card">
@@ -79,8 +85,9 @@ $(document).ready(function () {
       `);
 
     $(".card:hidden").fadeIn(1000);
-  }
+  };
 
+  // function to get the feedback and associated text colors.
   const getFeedback = () => {
     switch (true) {
       case score >= 0 && score <= 2:
@@ -97,7 +104,8 @@ $(document).ready(function () {
     }
   };
 
-  $(".next-btn").click(function () {
+  // tasks to execute upon next button click.
+  $(".next-btn").click(() => {
     const selectedOption = $(`input[name='q${currentQuestion}']:checked`).val();
     if (selectedOption) {
       $(".toast").hide();
@@ -126,7 +134,8 @@ $(document).ready(function () {
     }
   });
 
-  $(".retake-btn").click(function () {
+  // retake quiz button activities
+  $(".retake-btn").click(() => {
     $(".question-container").show();
     $(".next-btn").show();
     $(".result-container").hide();
@@ -137,5 +146,6 @@ $(document).ready(function () {
     displayQuestion();
   });
 
+  // displays the question in the first flow by default.
   displayQuestion();
 });

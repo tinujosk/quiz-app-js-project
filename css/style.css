@@ -1,3 +1,9 @@
+/* Student Name: Tinu Jos Kadavanattu
+     Student Number: 8927158
+     Section: 07
+*/
+
+/* Styles for the common section */
 body {
   margin: 0;
   padding: 0;
@@ -157,6 +163,8 @@ footer {
   text-decoration: none;
 }
 
+/* Styles for the slider section */
+
 .slider {
   width: 80%;
   margin: 20px auto;
@@ -176,6 +184,8 @@ footer {
   align-items: center;
   height: 60%;
 }
+
+/* Styles for the quiz section */
 
 .quiz-container {
   width: 80%;
@@ -236,6 +246,7 @@ footer {
   font-weight: 600;
 }
 
+/* Styles for the Pricing section */
 .pricing-plans {
   display: flex;
   width: 100%;
