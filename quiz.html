@@ -12,18 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&family=Libre+Baskerville:wght@400;700&family=Nunito:wght@300&family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <!-- Slick CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <!-- Slick theme -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
   </head>
   <body>
     <nav>
@@ -32,13 +20,14 @@
         <a href="./index.html"> <img src="./images/logo.png" alt="Logo" /></a>
       </div>
       <ul>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./quiz.html">Quiz</a></li>
         <li><a href="./pricing.html">Pricing</a></li>
         <li><a href="./about.html">About</a></li>
       </ul>
     </nav>
     <main>
-      <div id="slider-section">
+      <section id="main-section">
         <h1 class="bold-text">Quiz</h1>
         <div class="quiz-container">
           <h2>JavaScript</h2>
@@ -52,14 +41,14 @@
           <div class="result-container" style="display: none">
             <h3>Quiz Results</h3>
             <p>Your score: <span class="score"></span></p>
-            <h3 id="feedback">Amazing</h3>
+            <h3 id="feedback"></h3>
             <button class="submit-btn">Submit</button>
             <button class="retake-btn" style="display: none">
               Retake Quiz
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer>
       <div id="footer-main">
@@ -95,6 +84,7 @@
           <div>
             <h3>Quick Links</h3>
             <ul>
+              <li><a href="./index.html">Home</a></li>
               <li><a href="./quiz.html">Quiz</a></li>
               <li><a href="./pricing.html">Pricing</a></li>
               <li><a href="./about.html">About</a></li>
@@ -106,8 +96,6 @@
     </footer>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Slick JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/utils.js"></script>
+    <script src="./js/quiz.js"></script>
   </body>
 </html>

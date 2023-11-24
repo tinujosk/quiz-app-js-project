@@ -1,14 +1,4 @@
 $(document).ready(function () {
-  $(".slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 8000,
-    pauseOnHover: true,
-    cssEase: "linear",
-  });
-
   const javascriptQuestions = [
     {
       question: "What does 'DOM' stand for?",
@@ -66,36 +56,36 @@ $(document).ready(function () {
   function displayQuestion() {
     const currentQuizQuestion = javascriptQuestions[currentQuestion];
     $(".question-container").html(`
-      <div class="card">
-        <div class="card-body">
-        <h3>Question ${currentQuestion + 1} of ${totalQuestions}</h3>
-          <h5 class="card-title">${currentQuizQuestion.question}</h5>
-          <div class="options">
-            ${currentQuizQuestion.options
-              .map(
-                (option, index) => `
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="q${currentQuestion}" id="q${currentQuestion}_${index}" value="${option}">
-                <label class="form-check-label" for="q${currentQuestion}_${index}">
-                  ${option}
-                </label>
-              </div>
-            `
-              )
-              .join("")}
+        <div class="card">
+          <div class="card-body">
+          <h3>Question ${currentQuestion + 1} of ${totalQuestions}</h3>
+            <h5 class="card-title">${currentQuizQuestion.question}</h5>
+            <div class="options">
+              ${currentQuizQuestion.options
+                .map(
+                  (option, index) => `
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q${currentQuestion}" id="q${currentQuestion}_${index}" value="${option}">
+                  <label class="form-check-label" for="q${currentQuestion}_${index}">
+                    ${option}
+                  </label>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
           </div>
         </div>
-      </div>
-    `);
+      `);
 
     $(".card:hidden").fadeIn(1000);
   }
 
   const getFeedback = () => {
     switch (true) {
-      case score === 0:
+      case score >= 0 && score <= 2:
         return { message: "Bad! :(", color: "red" };
-      case score > 0 && score <= 4:
+      case score > 2 && score <= 4:
         return { message: "Average Score. Keep Learning!", color: "orange" };
       case score > 4 && score <= 7:
         return { message: "Almost there. Good job!", color: "#6b7f56" };
@@ -125,10 +115,10 @@ $(document).ready(function () {
         $(".submit-btn").hide();
         $(".retake-btn").show();
         $("#feedback").html(`
-        <div> 
-         ${getFeedback().message}
-        </div>
-        `);
+          <div> 
+           ${getFeedback().message}
+          </div>
+          `);
         $("#feedback").css("color", getFeedback().color);
       }
     } else {
